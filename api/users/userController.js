@@ -65,7 +65,7 @@ module.exports = {
     const salt = genSaltSync(10);
     body.password = hashSync(body.password, salt);
     updateUser(body, (error, result) => {
-      console.log("result", result.affectedRows);
+      // console.log("result", result.affectedRows);
       if (error) {
         console.log(error);
         return;
@@ -85,7 +85,7 @@ module.exports = {
   deleteUser: (req, res) => {
     const data = req.body;
     deleteUser(data, (error, result) => {
-      console.log("deleted res", result);
+      // console.log("deleted res", result);
       if (error) {
         console.log(error);
         return;
@@ -104,9 +104,9 @@ module.exports = {
   },
   login: (req, res) => {
     const body = req.body;
-    console.log("body",body);
+    // console.log("body",body);
     getUserByUserEmail(body.email, (error, result) => {
-      console.log("result", result);
+      // console.log("result", result);
       if (error) {
         console.log(error);
       }
