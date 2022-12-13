@@ -7,7 +7,7 @@ const userRouter = require("./api/users/userRouter");
 
 app.use(
   cors({
-    origin: "https://nodejs-mysql-rest-api.vercel.app/",
+    origin: "http://localhost:3001/",
   })
 );
 
