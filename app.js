@@ -8,7 +8,9 @@ const userRouter = require("./api/users/userRouter");
 
 app.use(express.json()); //as user is passing the json object hence need to convert it to json explicitly
 //user router
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 
 
 app.use("/api/users",userRouter);
