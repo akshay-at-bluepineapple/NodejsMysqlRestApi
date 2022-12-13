@@ -11,7 +11,7 @@ const router = require("express").Router();
 
 
 router.post("/", checktoken,createUser);
-router.get("/", checktoken,getUsers);
+router.get("/",getUsers); //remover token for testing
 router.get("/:id", checktoken,getUserById);
 router.patch("/",checktoken, updateUser);
 router.delete("/", checktoken,deleteUser);
