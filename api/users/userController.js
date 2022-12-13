@@ -106,13 +106,13 @@ module.exports = {
     const body = req.body;
     // console.log("body",body);
     getUserByUserEmail(body.email, (error, result) => {
-      // console.log("result", result);
+      console.log("result", result);
       if (error) {
         console.log(error);
       }
       if (!result) {
         return res.json({
-          sucess: 0,
+          success: 0,
           message: "Invalid username or password",
         });
       }
