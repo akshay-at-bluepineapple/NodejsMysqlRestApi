@@ -7,7 +7,7 @@ const userRouter = require("./api/users/userRouter");
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:3001/",
+    origin: "*",
   })
 );
 
